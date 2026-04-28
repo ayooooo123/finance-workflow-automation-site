@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LedgerFlow Automation | Finance workflow automation + AI</title>
+  <meta name="description" content="Static website concept for a finance workflow automation and AI consulting firm. Fast implementation, no ERP replacement, practical operator-led systems." />
+  <meta property="og:title" content="LedgerFlow Automation" />
+  <meta property="og:description" content="Finance workflow automation without the ERP project." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="LedgerFlow Automation home">
+      <span class="mark">LF</span>
+      <span><strong data-bind="firm.name">LedgerFlow Automation</strong><small data-bind="firm.eyebrow">Finance workflow automation + AI</small></span>
+    </a>
+    <nav id="nav" aria-label="Primary navigation"></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section reveal">
+      <div class="hero-copy">
+        <p class="eyebrow" data-bind="hero.kicker">Practical automation for finance teams</p>
+        <h1 data-bind="hero.title">Workflow automation without the ERP project.</h1>
+        <p class="lede" data-bind="hero.body">We help finance operators automate reporting, reconciliations, approvals, and month-end workflows using lightweight systems that fit around the tools they already use.</p>
+        <div class="actions">
+          <a class="button primary" href="#contact" data-bind="hero.primaryCta">Book a workflow review</a>
+          <a class="button secondary" href="#use-cases" data-bind="hero.secondaryCta">See use cases</a>
+        </div>
+      </div>
+      <div class="system-card" aria-label="Workflow system preview">
+        <div class="window-bar"><span></span><span></span><span></span></div>
+        <div class="flow-diagram">
+          <div class="node source"><b>Inputs</b><small>ERP export · bank file · spreadsheet</small></div>
+          <div class="connector"></div>
+          <div class="node rules"><b>Validation</b><small>missing fields · variance checks · approvals</small></div>
+          <div class="connector"></div>
+          <div class="node output"><b>Review Pack</b><small>summary · exceptions · next actions</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats reveal" id="summary" aria-label="Project summary"></section>
+
+    <section class="section split reveal" id="use-cases">
+      <div>
+        <p class="eyebrow">Use cases</p>
+        <h2>Designed for finance work that currently lives in inboxes and spreadsheets.</h2>
+      </div>
+      <p class="section-note">The first site version keeps this practical: no vague AI pitch, just clear problems, examples, and delivery mechanics.</p>
+    </section>
+    <section class="grid use-case-grid" id="useCaseGrid"></section>
+
+    <section class="section reveal" id="how-it-works">
+      <p class="eyebrow">How it works</p>
+      <div class="split tight">
+        <h2>A focused three-week implementation.</h2>
+        <p class="section-note">The positioning is intentionally different from an ERP implementation: one workflow, real examples, fast feedback, clean handoff.</p>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section class="section reveal" id="erp">
+      <p class="eyebrow">Why us vs ERP</p>
+      <div class="split tight">
+        <h2>Automation around the finance stack you already have.</h2>
+        <p class="section-note">ERP projects solve structural platform problems. This offer solves the operational drag between systems.</p>
+      </div>
+      <div class="comparison" role="table" aria-label="ERP versus lightweight workflow automation comparison">
+        <div class="row head" role="row"><div>Question</div><div>Traditional ERP path</div><div>LedgerFlow approach</div></div>
+        <div id="comparisonRows"></div>
+      </div>
+    </section>
+
+    <section class="section split reveal" id="about">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>Built for operators, controllers, and finance leads who need work to move.</h2>
+      </div>
+      <div class="copy-block">
+        <p>LedgerFlow is a placeholder brand for the proposal demo. The structure is ready for client-provided naming, logo, corporate style, and final copy.</p>
+        <p>The build is static HTML/CSS/JS, with editable site copy in <kbd>content.js</kbd>. That keeps the site simple enough for non-technical edits while staying fast and maintainable.</p>
+        <ul id="principles"></ul>
+      </div>
+    </section>
+
+    <section class="section contact reveal" id="contact">
+      <div>
+        <p class="eyebrow">Contact / book a call</p>
+        <h2>Show the workflow. Then decide what should be automated first.</h2>
+        <p class="section-note">The live form is front-end only for this demo. It can be wired to Cloudflare Pages Functions, Formspree, Basin, or the client’s CRM.</p>
+      </div>
+      <form class="contact-form" name="workflow-review" onsubmit="event.preventDefault(); window.demoSubmit();">
+        <label>Name<input required name="name" autocomplete="name" /></label>
+        <label>Email<input required type="email" name="email" autocomplete="email" /></label>
+        <label>Workflow to improve<textarea name="message" rows="5" placeholder="Month-end close, reconciliations, approval routing, reporting pack..."></textarea></label>
+        <button class="button primary" type="submit">Request workflow review</button>
+        <p class="form-note" id="formNote">Demo form. No data is sent yet.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>LedgerFlow Automation</strong> — static website concept for finance workflow automation consulting.</p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
